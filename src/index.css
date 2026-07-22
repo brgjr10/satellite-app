@@ -1,0 +1,170 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+:root {
+  --cyber-primary: #00fff9;
+  --cyber-secondary: #ff00c8;
+  --cyber-accent: #ff0066;
+  --cyber-warning: #ffff00;
+  --cyber-green: #00ff88;
+--hud-bg: rgba(20, 20, 20, 0.4);
+--hud-border: rgba(255, 255, 255, 0.1);
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  overflow: hidden;
+  background: #000;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+#root {
+  position: fixed;
+  inset: 0;
+}
+
+.scanline-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.03),
+    rgba(0, 0, 0, 0.03) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+}
+
+.cesium-viewer-bottom {
+  display: none !important;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+.hud-panel {
+  background: var(--hud-bg);
+  backdrop-filter: blur(10px) saturate(150%);
+  -webkit-backdrop-filter: blur(10px) saturate(150%);
+  border: 1px solid var(--hud-border);
+  box-shadow: 0 4px 20px rgba(0, 0, 50, 0.3);
+}
+
+.liquid-glass-panel {
+  background: rgba(10, 15, 25, 0.95);
+  backdrop-filter: blur(15px) saturate(180%);
+  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  border-left: 1px solid rgba(0, 255, 249, 0.3);
+  box-shadow: inset 0 0 40px rgba(0, 0, 30, 0.5), 0 0 60px rgba(0, 0, 0, 0.7);
+}
+
+.glass-card {
+  background: rgba(0, 20, 40, 0.4);
+  backdrop-filter: blur(10px) saturate(150%);
+  border: 1px solid rgba(0, 255, 249, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 50, 0.3);
+}
+
+.liquid-glass-panel::-webkit-scrollbar {
+  width: 4px;
+}
+
+.liquid-glass-panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.liquid-glass-panel::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 249, 0.3);
+  border-radius: 2px;
+}
+
+.neon-text {
+  color: var(--cyber-primary);
+}
+
+.neon-text-magenta {
+  color: var(--cyber-secondary);
+}
+
+.neon-text-pink {
+  color: var(--cyber-accent);
+}
+
+.hud-border {
+  border: 1px solid rgba(0, 255, 249, 0.2);
+  box-shadow: 0 0 1px rgba(0, 255, 249, 0.1), inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes radar-sweep {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.radar-sweep {
+  animation: radar-sweep 4s linear infinite;
+}
+
+@keyframes data-stream {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 100%; }
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+  92% { opacity: 1; }
+  93% { opacity: 0.3; }
+  94% { opacity: 1; }
+}
+
+.flicker {
+  animation: flicker 3s infinite;
+}
+
+.grid-bg {
+  background-image: 
+    linear-gradient(rgba(0, 255, 249, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 249, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+select {
+  color-scheme: dark;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+select option {
+  background-color: #05080f;
+  color: #e5e7eb;
+}
+
+select option:hover,
+select option:focus,
+select option:checked {
+  background-color: rgba(0, 255, 249, 0.25);
+  color: #ffffff;
+}

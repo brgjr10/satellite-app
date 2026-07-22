@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+__pycache__/
+venv/
+.env
+.env.local
+.venv/
+
+# Build outputs
+dist/
+build/
+out/
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Lockfiles (keep if you want, but usually fine to ignore)
+# package-lock.json
+# pnpm-lock.yaml
+
+# Secrets
+*.pem
+*.key
+*.p12
+*.pfx
+ACCESS.MD
