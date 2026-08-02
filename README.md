@@ -2,6 +2,8 @@
 
 A futuristic 3D globe visualization combining live traffic cameras, CCTV feeds, Flock ALPR locations, police tracking, and crime data.
 
+<img width="1129" height="781" alt="image" src="https://github.com/user-attachments/assets/b3f16bac-621f-4ead-9963-411d1ea922ab" />
+
 ## Features
 
 - **Interactive 3D Globe** - Three.js powered Earth with atmospheric glow
