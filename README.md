@@ -2,7 +2,7 @@
 
 A futuristic 3D globe visualization combining live traffic cameras, CCTV feeds, Flock ALPR locations, police tracking, and crime data.
 
-<img width="1129" height="781" alt="image" src="https://github.com/user-attachments/assets/b3f16bac-621f-4ead-9963-411d1ea922ab" />
+<img width="1280" height="640" alt="image" src="https://github.com/user-attachments/assets/33334040-4f91-4abf-a993-2cd520e10bfc" />
 
 ## Features
 
